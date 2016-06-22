@@ -4,7 +4,7 @@ Barracuda WAF ARM Templates for Azure
 ##Deploying with CLI, using a parameters file
 
 ```
-~/Desktop/AWSCFT @ Pinaka (tushar) > azure group create -n "clirunwithparams" -l "Brazil South"
+Pinaka (tushar) > azure group create -n "clirunwithparams" -l "Brazil South"
 info:    Executing command group create
 + Getting resource group clirunwithparams
 + Creating resource group clirunwithparams
@@ -16,8 +16,10 @@ data:    Provisioning State:  Succeeded
 data:    Tags: null
 data:
 info:    group create command OK
+```
 
-~/Desktop/AWSCFT @ Pinaka (tushar) > azure group deployment create -f azureMainTemplateMultiPayG.json -e azureDeployParams.json clirunwithparams clirunwithparamsDeploy -v
+```
+Pinaka (tushar) > azure group deployment create -f azureMainTemplateMultiPayG.json -e azureDeployParams.json clirunwithparams clirunwithparamsDeploy -v
 info:    Executing command group deployment create
 verbose: Initializing template configurations and parameters
 verbose: Creating a deployment
@@ -43,6 +45,34 @@ data:    subnetName          String        clirunwithparams
 data:    numberOfInstances   Int           2
 data:    vmSize              String        Standard_A1
 info:    group deployment create command OK
-~/Desktop/AWSCFT @ Pinaka (tushar) >
+```
+
+```
+Pinaka (tushar) > azure group deployment create -f azureMainTemplateMultiByol.json -e azureDeployParams.json pinaka pinakaDeploy -v --json
+info:    Executing command group deployment create
+verbose: Initializing template configurations and parameters
+verbose: Creating a deployment
+info:    Created template deployment "pinakaDeploy"
+verbose: Waiting for deployment to complete
+data:    DeploymentName     : pinakaDeploy
+data:    ResourceGroupName  : pinaka
+data:    ProvisioningState  : Succeeded
+data:    Timestamp          : 2016-06-22T10:59:22.6203523Z
+data:    Mode               : Incremental
+data:    Name                Type          Value
+data:    ------------------  ------------  ------------
+data:    adminPassword       SecureString  undefined
+data:    location            String        Brazil South
+data:    storageAccountName  String        pinaka
+data:    storageAccountType  String        Standard_LRS
+data:    vmName              String        pinaka
+data:    dnsNameForLBIP      String        pinaka
+data:    vNETName            String        pinaka
+data:    addressPrefix       String        10.0.0.0/16
+data:    subnetPrefix        String        10.0.0.0/16
+data:    subnetName          String        pinaka
+data:    numberOfInstances   Int           2
+data:    vmSize              String        Standard_A1
+info:    group deployment create command OK
 ```
 
