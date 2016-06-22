@@ -81,8 +81,6 @@
               "validationMessage": "Only numbers between 1 and 6 are allowed"
             }
           },
-          "visible": true
-        },
         {
           "name": "storageElement",
           "type": "Microsoft.Storage.StorageAccountSelector",
