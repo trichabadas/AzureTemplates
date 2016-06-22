@@ -381,7 +381,7 @@
           "imageReference": {
             "publisher": "barracudanetworks",
             "offer": "waf",
-            "sku": "byol",
+            "sku": "hourly",
             "version": "latest"
           },
           "osDisk": {
