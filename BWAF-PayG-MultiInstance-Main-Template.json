@@ -75,14 +75,8 @@
     },
     "numberOfInstances": {
       "type": "int",
-      "allowedValues": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "minValue": 1,
+      "maxValue": 6
     },
     "vmSize": {
       "type": "string",
@@ -272,7 +266,7 @@
               "backendAddressPool": {
                 "id": "[variables('lbPoolID')]"
               },
-              "protocol": "tcp",
+              "protocol": "Tcp",
               "frontendPort": 443,
               "backendPort": 443,
               "enableFloatingIP": false,
@@ -287,7 +281,7 @@
           {
             "name": "httpProbe",
             "properties": {
-              "protocol": "http",
+              "protocol": "Http",
               "port": 80,
               "intervalInSeconds": 30,
               "numberOfProbes": 2,
